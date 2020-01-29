@@ -5,13 +5,13 @@ import java.nio.file.Files
 
 import cats.instances.future._
 import com.bot4s.telegram.api.RequestHandler
-import com.bot4s.telegram.methods.{Request, JsonRequest, MultipartRequest, Response}
+import com.bot4s.telegram.methods.{JsonRequest, MultipartRequest, Request, Response}
 import com.bot4s.telegram.models.InputFile
 import com.bot4s.telegram.marshalling
+import com.typesafe.scalalogging.StrictLogging
 import io.circe.parser.parse
 import io.circe.{Decoder, Encoder}
 import scalaj.http.{Http, MultiPart}
-import slogging.StrictLogging
 
 import scala.concurrent.{ExecutionContext, Future, blocking}
 
@@ -85,9 +85,9 @@ class ScalajHttpClient(token: String, proxy: Proxy = Proxy.NO_PROXY, telegramHos
             marshalling.snakenize(key) -> inputFile.fileId
         }
 
-        val params = fields.getOrElse(Map())
+        val params = fields.getOrElse(Map()) ++ fileIdsParams
 
-        Http(url).params(params ++ fileIdsParams).postMulti(parts: _*)
+        Http(url).params(params.toMap).postMulti(parts: _*)
     }
 
     import marshalling.responseDecoder

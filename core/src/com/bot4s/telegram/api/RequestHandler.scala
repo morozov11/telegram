@@ -8,9 +8,9 @@ import cats.syntax.functor._
 import cats.syntax.monadError._
 import com.bot4s.telegram.methods._
 import io.circe.{Decoder, Encoder}
-import slogging.StrictLogging
-
 import com.bot4s.telegram.marshalling._
+import com.typesafe.scalalogging.StrictLogging
+
 
 abstract class RequestHandler[F[_]](implicit monadError: MonadError[F, Throwable]) extends StrictLogging {
 
