@@ -5,10 +5,13 @@
   <i>
     Idiomatic Scala wrapper for the
     <a href="https://core.telegram.org/bots/api" title="Telegram Bot API">
-      Telegram Bot API
+      Telegram Bot API;
     </a>
   </i>
-  <i> Fork for Scala 2.13.1 and Sbt builder</i>
+  
+</p>
+<p>
+<i>  Fork for Scala 2.13.1 and build under SBT against mill</i>
 </p>
 
 <p align="center">
