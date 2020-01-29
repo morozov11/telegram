@@ -9,9 +9,9 @@ import com.softwaremill.sttp.{Request => _, Response => _, _}
 import com.bot4s.telegram.marshalling
 import com.bot4s.telegram.methods._
 import com.bot4s.telegram.models.InputFile
+import com.typesafe.scalalogging.StrictLogging
 import io.circe.parser.parse
 import io.circe.{Decoder, Encoder}
-import slogging.StrictLogging
 
 import scala.concurrent.duration._
 

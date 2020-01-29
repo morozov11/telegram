@@ -8,6 +8,7 @@
       Telegram Bot API
     </a>
   </i>
+  <i> Fork for Scala 2.13.1 and Sbt builder</i>
 </p>
 
 <p align="center">
@@ -22,15 +23,6 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://travis-ci.org/bot4s/telegram" title="Travis CI Build Status">
-    <img src="https://travis-ci.org/bot4s/telegram.svg"/>
-  </a>
-  <a href="https://www.codacy.com/app/mukel/telegram?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bot4s/telegram&amp;utm_campaign=Badge_Grade" title="Codacy Badge">
-    <img src="https://api.codacy.com/project/badge/Grade/c90c7f7c287445eea233e304372a68fc"/>
-  </a>
-  <a href="https://maven-badges.herokuapp.com/maven-central/com.bot4s/telegram-core_2.12" title="Maven Central">
-    <img src="https://maven-badges.herokuapp.com/maven-central/com.bot4s/telegram-core_2.12/badge.svg"/>
-  </a>
   <a href="http://www.apache.org/licenses/LICENSE-2.0.html" title="License">
     <img src="https://img.shields.io/badge/license-Apache%202-blue.svg"/>
   </a>

@@ -11,8 +11,8 @@ import com.bot4s.telegram.api.RequestHandler
 import com.bot4s.telegram.marshalling.AkkaHttpMarshalling
 import com.bot4s.telegram.marshalling._
 import com.bot4s.telegram.methods.{Request, Response}
+import com.typesafe.scalalogging.StrictLogging
 import io.circe.{Decoder, Encoder}
-import slogging.StrictLogging
 
 import scala.concurrent.{ExecutionContext, Future}
 

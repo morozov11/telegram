@@ -15,9 +15,10 @@ import com.bot4s.telegram.models.MemberStatus.MemberStatus
 import com.bot4s.telegram.models.MessageEntityType.MessageEntityType
 import UpdateType.UpdateType
 import com.bot4s.telegram.models._
+import com.typesafe.scalalogging.StrictLogging
 import io.circe.Decoder
 import io.circe.generic.semiauto._
-import slogging.StrictLogging
+
 
 /** Circe marshalling borrowed/inspired from [[https://github.com/nikdon/telepooz]]
   */

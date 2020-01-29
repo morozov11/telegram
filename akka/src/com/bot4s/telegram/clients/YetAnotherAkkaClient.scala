@@ -12,10 +12,10 @@ import cats.instances.future._
 import com.bot4s.telegram.api.RequestHandler
 import com.bot4s.telegram.methods.{Request, Response}
 import io.circe.{Decoder, Encoder}
-import slogging.StrictLogging
 import com.bot4s.telegram.marshalling.responseDecoder
-
+import com.typesafe.scalalogging.StrictLogging
 import scala.concurrent.{ExecutionContext, Future}
+
 
 class YetAnotherAkkaClient(token: String, telegramHost: String = "api.telegram.org")
                           (implicit system: ActorSystem, materializer: Materializer, ec: ExecutionContext)
