@@ -3,6 +3,22 @@
 // Projects
 // *****************************************************************************
 
+version := "4.4.0-RC3-sevts"
+
+scalaVersion := "2.13.1"
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+pomIncludeRepository := { _ => false }
+
+publishMavenStyle       := true
+
+bintrayRepository := "telegram"
+
+licenses      += ("Apache-2.0", url("http://www.apache.org/licenses/"))
+
 lazy val Version = new {
   val akkaVersion = "2.6.1"
   val akkaActor = akkaVersion
@@ -27,7 +43,8 @@ lazy val core =
     (project in file("core"))
     .settings(commonSettings)
     .settings(
-    name := "telegram-core",
+      normalizedName := "telegram-core",
+      bintrayRepository := "telegram",
     libraryDependencies ++= Seq(
       "io.circe" %% "circe-core" % Version.circe,
       "io.circe" %% "circe-generic" % Version.circe,
@@ -59,7 +76,10 @@ lazy val akka: Project =
   project
     .in(file("akka"))
     .settings(commonSettings: _*)
-    .settings(name := "telegram-akka")
+    .settings(
+      normalizedName := "telegram-akka",
+      bintrayRepository := "telegram"
+    )
     .settings(
       libraryDependencies ++= Seq(
         library.akkaHttp,
@@ -107,7 +127,7 @@ lazy val library =
 
 lazy val commonSettings =
   Seq(
-    organization := "com.bot4s",
+    organization := "jellical",
     organizationName := "Alfonso² Peterssen",
     scalaVersion := "2.13.1",
     crossScalaVersions := Seq(scalaVersion.value, "2.12.10"),
